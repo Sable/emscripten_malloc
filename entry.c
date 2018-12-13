@@ -10,5 +10,5 @@ int main(int argc, char **argv){
     }    
     int b = ptr[9];
     free(ptr);
-    return b + c;
+    return b;
 }
