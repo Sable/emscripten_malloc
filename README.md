@@ -1,4 +1,11 @@
 # Emscripten Malloc
+The Emscripten project generates WebAssembly code from llvmR. Since WebAssembly
+at the moment only has one <i>Linear Memory</i> segment that requires manual
+memory management. It is useful for compiler writers to have a <i>Malloc/Free</i>
+implementation in WebAssembly. As such, this repository extracts the malloc
+implementation used by Emscripten. This implementation corresponds to the
+[pt2malloc](http://static.lwn.net/images/conf/rtlws-2011/proc/Jianping.pdf) implementation used by glibc. 
+
 The main files are as follows:
 - [entry.c](./entry.c) contains the C code used to compiled with Emscripten and
   extract the code. Command used for compilation:
